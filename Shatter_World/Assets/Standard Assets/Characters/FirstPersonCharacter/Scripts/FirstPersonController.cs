@@ -43,9 +43,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
         private float m_CurrentRotation = 0f;
-        private float rotationSpeed = 10;
         private float m_ThumbstickY = 0f;
-
 
 
         // Use this for initialization
@@ -67,16 +65,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
-            // Read input from the right thumbstick of a connected controller
-            float yRot = CrossPlatformInputManager.GetAxis("RightThumbstickX");
-            float xRot = CrossPlatformInputManager.GetAxis("RightThumbstickY");
-
-            yRot *= -1;
-            xRot *= -1;
-
-            m_CurrentRotation += yRot;
-            m_ThumbstickY += xRot;
-
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -105,11 +93,22 @@ namespace UnityStandardAssets.Characters.FirstPerson
             //transform.Rotate(0, yRot, 0);
             //m_Camera.transform.Rotate(-xRot, 0, 0);
 
+              // Read input from the right thumbstick of a connected controller
+
+            float yRot = CrossPlatformInputManager.GetAxis("RightThumbstickX");
+            float xRot = CrossPlatformInputManager.GetAxis("RightThumbstickY");
+
+
+            yRot *= -1;
+
+            m_CurrentRotation += yRot;
+            m_ThumbstickY += xRot;
+
             transform.rotation = Quaternion.Euler(0, m_CurrentRotation, 0);
             m_Camera.transform.localRotation = Quaternion.Euler(-m_ThumbstickY, 0, 0);
+            transform.Rotate(0, yRot, 0);
 
             // Update the character's rotation and movement
-            m_MouseLook.UpdateCursorLock();
             RotateView();
 
 
