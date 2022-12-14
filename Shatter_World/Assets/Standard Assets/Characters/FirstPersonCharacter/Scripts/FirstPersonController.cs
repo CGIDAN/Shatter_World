@@ -42,6 +42,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+        private float m_CurrentRotation = 0f;
+        private float rotationSpeed = 50;
+        private float m_ThumbstickY = 0f;
+
+
 
         // Use this for initialization
         private void Start()
@@ -62,6 +67,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         // Update is called once per frame
         private void Update()
         {
+           
             RotateView();
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
@@ -74,6 +80,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 Destroy(gameObject);
 
             }
+
+            float yRot = CrossPlatformInputManager.GetAxis("RightThumbstickX");
+            float interpolatedRotation = m_CurrentRotation + yRot * Time.deltaTime * rotationSpeed;
+            m_CurrentRotation = Mathf.Clamp(interpolatedRotation, -720f, 720f);
+            transform.Rotate(0, m_CurrentRotation, 0);
 
 
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
