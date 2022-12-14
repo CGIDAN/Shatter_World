@@ -25,7 +25,7 @@ public class GravityGun : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetMouseButtonDown(1))
         {
             if (grabbedRB)
             {
