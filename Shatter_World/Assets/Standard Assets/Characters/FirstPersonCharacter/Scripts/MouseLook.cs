@@ -21,10 +21,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private Quaternion m_CameraTargetRot;
         private bool m_cursorIsLocked = true;
 
+        private bool controllerPresent = false;
+
         public void Init(Transform character, Transform camera)
         {
             m_CharacterTargetRot = character.localRotation;
             m_CameraTargetRot = camera.localRotation;
+            controllerPresent = Input.GetJoystickNames().Length != 0;
+            smooth = controllerPresent;
         }
 
 

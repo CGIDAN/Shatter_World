@@ -89,6 +89,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_MoveDir.y = 0f;
             }
+
+
             // Use the thumbstick input to rotate the character on the x and y axis
             //transform.Rotate(0, yRot, 0);
             //m_Camera.transform.Rotate(-xRot, 0, 0);
@@ -98,15 +100,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
             float yRot = CrossPlatformInputManager.GetAxis("RightThumbstickX");
             float xRot = CrossPlatformInputManager.GetAxis("RightThumbstickY");
 
-
+            yRot = Mathf.Clamp(yRot, -90f, 90f);
+            xRot = Mathf.Clamp(xRot, -90f, 90f);
             yRot *= -1;
 
             m_CurrentRotation += yRot;
             m_ThumbstickY += xRot;
 
+            m_CurrentRotation = Mathf.Clamp(m_CurrentRotation + yRot, -90f, 90f);
+            m_ThumbstickY = Mathf.Clamp(m_ThumbstickY + xRot, -90f, 90f);
             transform.rotation = Quaternion.Euler(0, m_CurrentRotation, 0);
             m_Camera.transform.localRotation = Quaternion.Euler(-m_ThumbstickY, 0, 0);
-            transform.Rotate(0, yRot, 0);
 
             // Update the character's rotation and movement
             RotateView();

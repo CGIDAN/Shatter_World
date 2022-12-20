@@ -297,12 +297,12 @@ InputManager:
     m_Name: RightThumbstickY
     descriptiveName: Right Thumb Stick Y
     descriptiveNegativeName: 
-    negativeButton: left
-    positiveButton: right
+    negativeButton: joystick button 6
+    positiveButton: joystick button 7
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: 0.001
+    dead: 0.1
     sensitivity: 1
     snap: 0
     invert: 0
@@ -313,12 +313,12 @@ InputManager:
     m_Name: RightThumbstickX
     descriptiveName: Right Thumb Stick X
     descriptiveNegativeName: 
-    negativeButton: left
-    positiveButton: right
+    negativeButton: joystick button 4
+    positiveButton: joystick button 5
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: 0.001
+    dead: 0.1
     sensitivity: 1
     snap: 0
     invert: 1
