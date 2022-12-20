@@ -101,7 +101,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             float xRot = CrossPlatformInputManager.GetAxis("RightThumbstickY");
 
             yRot = Mathf.Clamp(yRot, -90f, 90f);
-            xRot = Mathf.Clamp(xRot, -90f, 90f);
+            xRot = Mathf.Clamp(xRot, -360f, 360f);
             yRot *= -1;
             xRot *= -1;
 
