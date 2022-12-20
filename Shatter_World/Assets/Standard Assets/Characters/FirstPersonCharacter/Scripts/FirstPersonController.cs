@@ -101,14 +101,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
             float xRot = CrossPlatformInputManager.GetAxis("RightThumbstickY");
 
             yRot = Mathf.Clamp(yRot, -90f, 90f);
-            xRot = Mathf.Clamp(xRot, -360f, 360f);
             yRot *= -1;
             xRot *= -1;
 
             m_CurrentRotation += yRot;
             m_ThumbstickY += xRot;
 
-            m_CurrentRotation = Mathf.Clamp(m_CurrentRotation + yRot, -90f, 90f);
+            m_CurrentRotation = Mathf.Clamp(m_CurrentRotation + yRot, -360f, 360f);
             m_ThumbstickY = Mathf.Clamp(m_ThumbstickY + xRot, -90f, 90f);
             transform.rotation = Quaternion.Euler(0, m_CurrentRotation, 0);
             m_Camera.transform.localRotation = Quaternion.Euler(-m_ThumbstickY, 0, 0);

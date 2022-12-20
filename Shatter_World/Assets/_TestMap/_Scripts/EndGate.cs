@@ -19,6 +19,9 @@ public class EndGate : MonoBehaviour
             // Enable the win screen canvas
             winScreen.SetActive(true);
 
+            // Pause the game by setting the time scale to 0
+            Time.timeScale = 0;
+
         }
     }
 
