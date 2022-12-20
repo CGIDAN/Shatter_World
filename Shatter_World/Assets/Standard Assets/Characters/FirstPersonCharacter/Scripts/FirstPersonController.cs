@@ -103,6 +103,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             yRot = Mathf.Clamp(yRot, -90f, 90f);
             xRot = Mathf.Clamp(xRot, -90f, 90f);
             yRot *= -1;
+            xRot *= -1;
 
             m_CurrentRotation += yRot;
             m_ThumbstickY += xRot;
@@ -249,6 +250,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
             // On standalone builds, walk/run speed is modified by a key press.
             // keep track of whether or not the character is walking or running
             m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
+
+            // check if joystick button 5 is pressed on game controller
+            m_IsWalking &= !Input.GetButton("Fire3");
+
 #endif
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;

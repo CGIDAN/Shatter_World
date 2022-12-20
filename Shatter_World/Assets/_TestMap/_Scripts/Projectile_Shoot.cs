@@ -43,6 +43,9 @@ public class Projectile_Shoot : MonoBehaviour
         if (allowButtonHold) shooting = Input.GetKey(KeyCode.Mouse0);
         else shooting = Input.GetKey(KeyCode.Mouse0);
 
+        // check if A button is pressed on Xbox controller
+        shooting |= Input.GetButton("Fire1");
+
         //reloading
         if (Input.GetKeyDown(KeyCode.R) && bulletsLeft < magazineSize && !reloading) Reload();
         // reload automatically when trying to shoot without ammo
