@@ -10,12 +10,10 @@ public class SceneLoader : MonoBehaviour
     public GameObject loadingScreen;
     public Slider loadingBar;
 
-
-   public void LoadScene(int levelIndex)
+    public void LoadScene(int levelIndex)
     {
         Time.timeScale = 1f;
         StartCoroutine(LoadScenesAsynchronously(levelIndex));
-
     }
 
     IEnumerator LoadScenesAsynchronously(int levelIndex)
@@ -28,6 +26,7 @@ public class SceneLoader : MonoBehaviour
             yield return null;
         }
     }
+
 
 
 }

@@ -11,6 +11,7 @@ public class EndGate : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.gameObject.name == "Player")
         {
             // Set the time text to the time it took to complete the level
@@ -19,11 +20,11 @@ public class EndGate : MonoBehaviour
             // Enable the win screen canvas
             winScreen.SetActive(true);
 
-            // Pause the game by setting the time scale to 0
             Time.timeScale = 0;
 
         }
     }
+
 
 
     // Call this method when the "Try Again" button is clicked
