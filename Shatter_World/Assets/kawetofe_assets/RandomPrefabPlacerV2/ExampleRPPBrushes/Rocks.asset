@@ -19,9 +19,9 @@ MonoBehaviour:
       m_Bits: 55
     prefab: {fileID: 6192706608460503447, guid: b856cb9851210e74ebf7c675eec2c6d8,
       type: 3}
-    possibility: 0.8
-    scaleMin: 2.506596
-    scaleMax: 4.8195243
+    possibility: 0.031
+    scaleMin: 0.52770436
+    scaleMax: 1.2905016
     placementOffset: {x: 0, y: 0, z: 0}
     lockedRotations: {x: 1, y: 0, z: 1}
     useNormalsForRotation: 0
@@ -31,9 +31,9 @@ MonoBehaviour:
       m_Bits: 55
     prefab: {fileID: 4488125056595779209, guid: 202823bf299350c4c83944a61f1bb818,
       type: 3}
-    possibility: 0.8
-    scaleMin: 2.2841687
-    scaleMax: 4.168338
+    possibility: 0.052
+    scaleMin: 0.560686
+    scaleMax: 1.0926121
     placementOffset: {x: 0, y: 0, z: 0}
     lockedRotations: {x: 1, y: 0, z: 1}
     useNormalsForRotation: 0
@@ -41,11 +41,35 @@ MonoBehaviour:
   - allowedLayers:
       serializedVersion: 2
       m_Bits: 55
-    prefab: {fileID: 4389040425572890867, guid: 6e6a9b23e8b79884dac0ab8f796a74c6,
+    prefab: {fileID: 8498472570219430362, guid: 03026b15d0b461f43835c13fc01c066c,
       type: 3}
-    possibility: 0.046
-    scaleMin: 2.2841687
-    scaleMax: 3.871504
+    possibility: 0
+    scaleMin: 8.775461
+    scaleMax: 9.868073
+    placementOffset: {x: 0, y: 0, z: 0}
+    lockedRotations: {x: 1, y: 0, z: 1}
+    useNormalsForRotation: 0
+    maxSlopeAngle: 45
+  - allowedLayers:
+      serializedVersion: 2
+      m_Bits: 55
+    prefab: {fileID: 5723583388653015365, guid: 841f28532daca684f98cae36c06a80cf,
+      type: 3}
+    possibility: 0.649
+    scaleMin: 2.0532985
+    scaleMax: 3.3767815
+    placementOffset: {x: 0, y: 0, z: 0}
+    lockedRotations: {x: 1, y: 0, z: 1}
+    useNormalsForRotation: 0
+    maxSlopeAngle: 45
+  - allowedLayers:
+      serializedVersion: 2
+      m_Bits: 55
+    prefab: {fileID: 3061304811229316802, guid: ae0acd45f31180e4386982e78530dc81,
+      type: 3}
+    possibility: 0.366
+    scaleMin: 1.4926121
+    scaleMax: 3.0799472
     placementOffset: {x: 0, y: 0, z: 0}
     lockedRotations: {x: 1, y: 0, z: 1}
     useNormalsForRotation: 0
