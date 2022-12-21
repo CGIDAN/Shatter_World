@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AudioStop : MonoBehaviour
+public class AudioStop
+    : MonoBehaviour
 {
     private AudioSource audioSource;
 
