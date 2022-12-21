@@ -14,6 +14,7 @@ public class EndGate : MonoBehaviour
 
         if (other.gameObject.name == "Player")
         {
+
             // Set the time text to the time it took to complete the level
             timeText.text = "Time: " + Time.timeSinceLevelLoad.ToString("F2");
 
