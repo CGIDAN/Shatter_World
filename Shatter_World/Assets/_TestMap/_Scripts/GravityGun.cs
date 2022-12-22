@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class GravityGun : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class GravityGun : MonoBehaviour
         {
             grabbedRB.MovePosition(Vector3.Lerp(grabbedRB.position, objectHolder.transform.position, Time.deltaTime * lerpSpeed));
 
-            if (Input.GetMouseButtonDown(2))
+            if (Input.GetKeyDown(KeyCode.JoystickButton2))
             {
                 grabbedRB.isKinematic = false;
                 grabbedRB.AddForce(cam.transform.forward * throwForce, ForceMode.VelocityChange);
@@ -25,7 +26,7 @@ public class GravityGun : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetKeyDown(KeyCode.JoystickButton1))
         {
             if (grabbedRB)
             {

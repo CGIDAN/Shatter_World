@@ -8,7 +8,15 @@ public class puse_menu : MonoBehaviour
 {
     public static bool isGamePaused = false;
 
+
+
     [SerializeField] GameObject pauseMenu;
+
+    private void Awake()
+    {
+        isGamePaused = false;
+
+    }
 
     void Update()
     {
@@ -23,6 +31,7 @@ public class puse_menu : MonoBehaviour
                 PauseGame();
             }
         }
+
     }
 
     public void ResumeGame()
@@ -37,6 +46,7 @@ public class puse_menu : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isGamePaused = true;
+
     }
 
     public void LoadMenu()

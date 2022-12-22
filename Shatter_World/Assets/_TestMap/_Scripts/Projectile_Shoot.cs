@@ -1,14 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Projectile_Shoot : MonoBehaviour
 {
+    //audio
+    public AudioSource audioSource;
+
     //bullet
     public GameObject bullet;
 
     //bullet force
     public float shootForce, upwardForce;
+
+    //pause menu
+    public puse_menu pauseMenu;
 
     //Gun stats
     public float timeBetweenShooting, spread, reloadTime, timeBetweenShots;
@@ -30,8 +37,15 @@ public class Projectile_Shoot : MonoBehaviour
     {//make sure magazine is full
         bulletsLeft = magazineSize;
         readyToShoot = true;
+        audioSource = GetComponent<AudioSource>();
+
     }
 
+    private void Start()
+    {
+        audioSource.Stop();
+
+    }
     private void Update()
     {
         MyInput();
@@ -40,7 +54,7 @@ public class Projectile_Shoot : MonoBehaviour
     private void MyInput()
     {
         //check if allowed to hold down button 
-        if (allowButtonHold) shooting = Input.GetKey(KeyCode.Mouse0);
+        if (allowButtonHold) shooting = Input.GetKeyDown(KeyCode.JoystickButton0);
         else shooting = Input.GetKey(KeyCode.Mouse0);
 
         // check if A button is pressed on Xbox controller
@@ -63,6 +77,7 @@ public class Projectile_Shoot : MonoBehaviour
 
     private void Shoot()
     {
+
         readyToShoot = false;
 
         //find the hit position using raycast
@@ -86,6 +101,7 @@ public class Projectile_Shoot : MonoBehaviour
         //calculate direction with spread
         Vector3 directionWithSpread = directionWithoutSpread + new Vector3(x, y, 0);
 
+
         //Instantiate bullet/projectile
         GameObject currentBullet = Instantiate(bullet, attackPoint.position, Quaternion.identity);
         //rotate bullet to shoot direction
@@ -94,6 +110,18 @@ public class Projectile_Shoot : MonoBehaviour
         // add forces to bullet
         currentBullet.GetComponent<Rigidbody>().AddForce(directionWithSpread.normalized * shootForce, ForceMode.Impulse);
         currentBullet.GetComponent<Rigidbody>().AddForce(fpsCam.transform.up * upwardForce, ForceMode.Impulse);
+
+        // Check if the pause menu is active
+        if (puse_menu.isGamePaused)
+        {
+            audioSource.Pause();
+        }
+        else
+        {
+            // Play the shooting sound
+            audioSource.Play();
+        }
+
 
         bulletsLeft--;
         bulletsShot++;
