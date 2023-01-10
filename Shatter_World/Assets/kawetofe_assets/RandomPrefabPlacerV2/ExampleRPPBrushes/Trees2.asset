@@ -17,10 +17,21 @@ MonoBehaviour:
   - allowedLayers:
       serializedVersion: 2
       m_Bits: 55
-    prefab: {fileID: 1547096251602704, guid: e9ecf313aef9bd14e97af020ad19ff5e, type: 3}
+    prefab: {fileID: 919132149155446097, guid: 20a9fc42a82a04547ab38076af5a5a06, type: 3}
     possibility: 0.8
     scaleMin: 0.8
     scaleMax: 1.2
+    placementOffset: {x: 0, y: 0, z: 0}
+    lockedRotations: {x: 1, y: 0, z: 1}
+    useNormalsForRotation: 0
+    maxSlopeAngle: 45
+  - allowedLayers:
+      serializedVersion: 2
+      m_Bits: 55
+    prefab: {fileID: 919132149155446097, guid: 0d16267f8cad1434598e7755a17f1ab8, type: 3}
+    possibility: 0.8
+    scaleMin: 0.17335096
+    scaleMax: 0.57335114
     placementOffset: {x: 0, y: 0, z: 0}
     lockedRotations: {x: 1, y: 0, z: 1}
     useNormalsForRotation: 0

@@ -108,7 +108,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_CurrentRotation += yRot;
             m_ThumbstickY += xRot;
 
-            m_CurrentRotation = Mathf.Clamp(m_CurrentRotation + yRot, -360f, 360f);
+            m_CurrentRotation = Mathf.Clamp(m_CurrentRotation + yRot, -1480f, 1480f);
             m_ThumbstickY = Mathf.Clamp(m_ThumbstickY + xRot, -90f, 90f);
             transform.rotation = Quaternion.Euler(0, m_CurrentRotation, 0);
             m_Camera.transform.localRotation = Quaternion.Euler(-m_ThumbstickY, 0, 0);

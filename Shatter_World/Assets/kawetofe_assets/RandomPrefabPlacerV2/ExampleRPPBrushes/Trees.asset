@@ -17,10 +17,47 @@ MonoBehaviour:
   - allowedLayers:
       serializedVersion: 2
       m_Bits: 55
-    prefab: {fileID: 1644918953325098, guid: ede7754b8e21c2549acb449660f64910, type: 3}
+    prefab: {fileID: 6192706608460503447, guid: b856cb9851210e74ebf7c675eec2c6d8,
+      type: 3}
+    possibility: 0.892
+    scaleMin: 0.7010554
+    scaleMax: 1.1010556
+    placementOffset: {x: 0, y: 0, z: 0}
+    lockedRotations: {x: 1, y: 0, z: 1}
+    useNormalsForRotation: 0
+    maxSlopeAngle: 45
+  - allowedLayers:
+      serializedVersion: 2
+      m_Bits: 55
+    prefab: {fileID: 4488125056595779209, guid: 202823bf299350c4c83944a61f1bb818,
+      type: 3}
     possibility: 0.8
-    scaleMin: 0.8
-    scaleMax: 1.674138
+    scaleMin: 0.60211086
+    scaleMax: 1.0021108
+    placementOffset: {x: 0, y: 0, z: 0}
+    lockedRotations: {x: 0, y: 0, z: 0}
+    useNormalsForRotation: 0
+    maxSlopeAngle: 45
+  - allowedLayers:
+      serializedVersion: 2
+      m_Bits: 55
+    prefab: {fileID: 4316993141488464180, guid: 144cdea10be295a40bfbfc4f8883fb62,
+      type: 3}
+    possibility: 0.552
+    scaleMin: 1.5915568
+    scaleMax: 2.4532979
+    placementOffset: {x: 0, y: 0, z: 0}
+    lockedRotations: {x: 1, y: 0, z: 1}
+    useNormalsForRotation: 0
+    maxSlopeAngle: 45
+  - allowedLayers:
+      serializedVersion: 2
+      m_Bits: 55
+    prefab: {fileID: 8784147357951473735, guid: 0a5d779191ac23a4b9eeba9766712367,
+      type: 3}
+    possibility: 0.598
+    scaleMin: 1.2617414
+    scaleMax: 1.8266491
     placementOffset: {x: 0, y: 0, z: 0}
     lockedRotations: {x: 1, y: 0, z: 1}
     useNormalsForRotation: 0

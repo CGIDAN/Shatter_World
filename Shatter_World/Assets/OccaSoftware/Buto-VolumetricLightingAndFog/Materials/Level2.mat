@@ -137,32 +137,32 @@ Material:
     - Vector1_f223bc9c4a5c488983489c3fcd058620_1: 3
     - _AlphaClip: 0
     - _AnimateSamplePosition: 1
-    - _Anisotropy: -0.34
-    - _BaseHeight: 21.86
+    - _Anisotropy: 0.188
+    - _BaseHeight: 5.4
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _ColorRampInfluence: 0.269
+    - _ColorRampInfluence: 0.245
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _FogDensity: 3.11
+    - _FogDensity: 4.46
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _HeightFalloff: 0.05
-    - _LightIntensity: 4.32
+    - _HeightFalloff: 0.299
+    - _LightIntensity: 3.6
     - _MaxDistanceNonVol: 5000
     - _MaxDistanceNonVolumetric: 6231
     - _MaxDistanceVol: 64
-    - _MaxDistanceVolumetric: 97.6
+    - _MaxDistanceVolumetric: 56.3
     - _Metallic: 0
-    - _NoiseIntensityMax: 2.5903614
-    - _NoiseIntensityMin: 0.93376166
+    - _NoiseIntensityMax: 1.5960975
+    - _NoiseIntensityMin: 0.6851957
     - _NoiseTiling: 30
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -170,7 +170,7 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _SampleCount: 55
-    - _ShadowIntensity: 1.38
+    - _ShadowIntensity: 1.05
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

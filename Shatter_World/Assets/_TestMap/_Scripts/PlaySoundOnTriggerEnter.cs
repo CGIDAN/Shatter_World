@@ -7,6 +7,9 @@ public class PlaySoundOnTriggerEnter : MonoBehaviour
     // Assign a sound in the inspector
     public AudioClip soundToPlay;
 
+    [SerializeField]
+    public Projectile_Shoot projectileShoot;
+
     // A boolean to keep track of whether the sound has been played
     private bool soundPlayed = false;
 
@@ -29,6 +32,15 @@ public class PlaySoundOnTriggerEnter : MonoBehaviour
 
             // Set the soundPlayed variable to true
             soundPlayed = true;
-        }
+
+            // Disable shooting for 3 seconds
+            projectileShoot.canShoot = false;
+            Invoke("EnableShooting", 3.0f);
+         }
     }
+    private void EnableShooting()
+    {
+        projectileShoot.canShoot = true;
+    }
+
 }

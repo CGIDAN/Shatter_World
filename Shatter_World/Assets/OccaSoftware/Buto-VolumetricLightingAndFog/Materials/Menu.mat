@@ -137,8 +137,8 @@ Material:
     - Vector1_f223bc9c4a5c488983489c3fcd058620_1: 3
     - _AlphaClip: 0
     - _AnimateSamplePosition: 1
-    - _Anisotropy: -0.12
-    - _BaseHeight: -447.9
+    - _Anisotropy: -0.177
+    - _BaseHeight: -508.29
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
@@ -169,7 +169,7 @@ Material:
     - _QueueControl: -1
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _SampleCount: 45
+    - _SampleCount: 46
     - _ShadowIntensity: 5.6
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0

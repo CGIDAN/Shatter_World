@@ -9,7 +9,7 @@ public class Stairs_Destructible : MonoBehaviour
 
     private void OnCollisionEnter(UnityEngine.Collision collision)
     {
-        if (collision.gameObject.tag == "player")
+        if (collision.gameObject.tag == "Player")
         {
             Instantiate(destroyedVersion, transform.position, transform.rotation);
             Destroy(gameObject);

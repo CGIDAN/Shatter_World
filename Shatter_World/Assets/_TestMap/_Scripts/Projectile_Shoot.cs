@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
+using Random = UnityEngine.Random;
 
 public class Projectile_Shoot : MonoBehaviour
 {
     //audio
     public AudioSource audioSource;
+    public AudioClip sound1;
+    public AudioClip sound2;
+
+    public bool canShoot = true;
 
     //bullet
     public GameObject bullet;
@@ -66,7 +71,7 @@ public class Projectile_Shoot : MonoBehaviour
         if (readyToShoot && shooting && !reloading && bulletsLeft <=0) Reload();
 
         //shooting
-        if (readyToShoot && shooting && !reloading && bulletsLeft > 0)
+        if (readyToShoot && shooting && !reloading && bulletsLeft > 0 && canShoot)
         {
             //set bullets shot to 0
             bulletsShot = 0;
@@ -77,6 +82,8 @@ public class Projectile_Shoot : MonoBehaviour
 
     private void Shoot()
     {
+        AudioClip[] sounds = { sound1, sound2 };
+
 
         readyToShoot = false;
 
@@ -119,6 +126,8 @@ public class Projectile_Shoot : MonoBehaviour
         else
         {
             // Play the shooting sound
+            int randomIndex = Random.Range(0, sounds.Length);
+            audioSource.clip = sounds[randomIndex];
             audioSource.Play();
         }
 

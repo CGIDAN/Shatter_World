@@ -127,9 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c24f6f2c408df441913af4049360d0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxX: 50
-  maxY: 50
-  maxZ: 50
-  minX: -50
-  minY: -50
-  minZ: -50
+  maxX: 120
+  maxY: 120
+  maxZ: 120
+  minX: -120
+  minY: -120
+  minZ: -120
